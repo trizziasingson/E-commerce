@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en-PH">
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<style>
+			body { line-height:116%; font-family:Aptos; font-size:12pt }
+			h1, h2, h3, h4, h5, h6, p { margin:0pt 0pt 8pt }
+			h1 { margin-top:18pt; margin-bottom:4pt; page-break-inside:avoid; page-break-after:avoid; line-height:116%; font-family:'Aptos Display'; font-size:20pt; font-weight:normal; color:#0f4761 }
+			h2 { margin-top:8pt; margin-bottom:4pt; page-break-inside:avoid; page-break-after:avoid; line-height:116%; font-family:'Aptos Display'; font-size:16pt; font-weight:normal; color:#0f4761 }
+			h3 { margin-top:8pt; margin-bottom:4pt; page-break-inside:avoid; page-break-after:avoid; line-height:116%; font-family:Aptos; font-size:14pt; font-weight:normal; color:#0f4761 }
+			h4 { margin-top:4pt; margin-bottom:2pt; page-break-inside:avoid; page-break-after:avoid; line-height:116%; font-family:Aptos; font-size:12pt; font-weight:normal; font-style:italic; color:#0f4761 }
+			h5 { margin-top:4pt; margin-bottom:2pt; page-break-inside:avoid; page-break-after:avoid; line-height:116%; font-family:Aptos; font-size:12pt; font-weight:normal; color:#0f4761 }
+			h6 { margin-top:2pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:116%; font-family:Aptos; font-size:12pt; font-weight:normal; font-style:italic; color:#595959 }
+			.Heading7 { margin-top:2pt; margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:116%; font-size:12pt; font-weight:normal; color:#595959 }
+			.Heading8 { margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:116%; font-size:12pt; font-weight:normal; font-style:italic; color:#272727 }
+			.Heading9 { margin-bottom:0pt; page-break-inside:avoid; page-break-after:avoid; line-height:116%; font-size:12pt; font-weight:normal; color:#272727 }
+			.IntenseQuote { margin:18pt 43.2pt; text-align:center; line-height:116%; border-top:0.75pt solid #0f4761; border-bottom:0.75pt solid #0f4761; padding-top:10pt; padding-bottom:10pt; font-size:12pt; font-style:italic; color:#0f4761 }
+			.ListParagraph { margin-left:36pt; margin-bottom:8pt; line-height:116%; font-size:12pt }
+			.Quote { margin-top:8pt; margin-bottom:8pt; text-align:center; line-height:116%; font-size:12pt; font-style:italic; color:#404040 }
+			.Subtitle { margin-bottom:8pt; line-height:116%; font-size:14pt; letter-spacing:0.75pt; color:#595959 }
+			.Title { margin-bottom:4pt; line-height:normal; font-family:'Aptos Display'; font-size:28pt; letter-spacing:-0.5pt }
+			span.Heading1Char { font-family:'Aptos Display'; font-size:20pt; color:#0f4761 }
+			span.Heading2Char { font-family:'Aptos Display'; font-size:16pt; color:#0f4761 }
+			span.Heading3Char { font-size:14pt; color:#0f4761 }
+			span.Heading4Char { font-style:italic; color:#0f4761 }
+			span.Heading5Char { color:#0f4761 }
+			span.Heading6Char { font-style:italic; color:#595959 }
+			span.Heading7Char { color:#595959 }
+			span.Heading8Char { font-style:italic; color:#272727 }
+			span.Heading9Char { color:#272727 }
+			span.IntenseEmphasis { font-style:italic; color:#0f4761 }
+			span.IntenseQuoteChar { font-style:italic; color:#0f4761 }
+			span.IntenseReference { font-weight:bold; font-variant:small-caps; letter-spacing:0.25pt; color:#0f4761 }
+			span.QuoteChar { font-style:italic; color:#404040 }
+			span.SubtitleChar { font-size:14pt; letter-spacing:0.75pt; color:#595959 }
+			span.TitleChar { font-family:'Aptos Display'; font-size:28pt; letter-spacing:-0.5pt }
+@media (max-width: 900px) { 
+img { 
+   max-width: 100%;
+   height: auto;
+}
+
+.table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+}	
+
+
+		</style>
+	</head>
+	<body>
+			<p>
+				&lt;!DOCTYPE html&gt;
+			</p>
+			<p>
+				&lt;html lang="en"&gt;
+			</p>
+			<p>
+				&lt;head&gt;
+			</p>
+			<p>
+				&#xa0; &lt;meta charset="UTF-8"&gt;
+			</p>
+			<p>
+				&#xa0; &lt;title&gt;Brazilian E-Commerce Analysis | Portfolio&lt;/title&gt;
+			</p>
+			<p>
+				&#xa0; &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+			</p>
+			<p>
+				&#xa0; &lt;link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&amp;display=swap" rel="stylesheet"&gt;
+			</p>
+			<p>
+				&#xa0; &lt;style&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; :root {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; --main-blue: #8fbefc;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; --accent-blue: #446aac;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; --pastel-bg: #e7f2ff;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; --white: #fff;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; --light-gray: #f5f6fa;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; --shadow: 0 4px 20px rgba(68,106,172,0.07);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; html, body {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin: 0; padding: 0;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-family: 'Montserrat', Arial, sans-serif;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; background: linear-gradient(120deg, var(--main-blue) 0%, var(--pastel-bg) 100%);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; min-height: 100vh;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: var(--accent-blue);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; letter-spacing: 0.01em;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; header {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; background: linear-gradient(90deg, var(--main-blue) 70%, #c9e7fa 100%);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; box-shadow: var(--shadow);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; padding: 2.2rem 0 1.4rem 0;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; text-align: center;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: var(--accent-blue);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; header h1 {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin: 0 0 .4rem 0;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-size: 2.3rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-weight: 700;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; letter-spacing: .7px;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; header p {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: #5171a6;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-size: 1.08rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin: 0 0 .5rem 0;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; .container {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; background: var(--white);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; max-width: 900px;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin: 2.4rem auto;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; border-radius: 20px;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; padding: 2.2rem 2rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; box-shadow: var(--shadow);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; h2 {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: var(--main-blue);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-size: 1.45rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; border-left: 5px solid var(--main-blue);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; padding-left: 13px;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-top: 2.2rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-bottom: 1.3rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; letter-spacing: 0.03em;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; h3 {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: #446aac;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-size: 1.07rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-bottom: .7rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-weight: 600;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-top: 1.2rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; .columns {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; display: flex;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; gap: 2rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; flex-wrap: wrap;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-bottom: 1.3rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; .col {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; flex: 1 1 250px;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; min-width: 230px;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; ul, .bullets {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: #3d597c;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-left: 1.1rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-bottom: 1.1rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-size: 1rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; padding: 0;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; li { margin-bottom: .4em; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; .card {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; background: var(--light-gray);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; border-radius: 13px;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; box-shadow: 0 2px 12px rgba(90,137,188,0.07);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; padding: 1rem 1.3rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-bottom: 1.6rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; .findings-grid {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; display: grid;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; grid-template-columns: 1fr 1fr;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; gap: 1.3rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-bottom: 1.3rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; .finding {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; background: #e9f2fb;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; border-radius: 11px;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; padding: 1.1rem 1.1rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-size: 1rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: #41608d;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; box-shadow: 0 2px 8px rgba(102,153,204,0.09);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; .pdf-preview {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; width: 100%;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; height: 410px;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; border: 1px solid #c0d5ed;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; border-radius: 11px;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-top: .5rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-bottom: 1.1rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; box-shadow: 0 2px 12px rgba(90,137,188,0.09);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; background: var(--white);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; .links-list {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; display: flex;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; flex-wrap: wrap;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; gap: 1.2rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-top: 1.2rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin-bottom: .3rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; .ext-link {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; background: var(--main-blue);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: var(--white) !important;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; padding: .85rem 1.45rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; border-radius: 9px;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-weight: 600;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-size: 1rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; text-decoration: none;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; transition: background 0.18s;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; box-shadow: 0 1px 8px rgba(60,120,200,0.10);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; display: inline-block;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; .ext-link:hover {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; background: var(--accent-blue);
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; .footer {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; text-align: center;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; margin: 2.3rem 0 1.3rem 0;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; color: #7093be;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; font-size: 1rem;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; @media (max-width: 780px) {
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; .container { padding: 1.1rem .7rem; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; .columns, .findings-grid { flex-direction: column; display: block; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; .finding { margin-bottom: 1.1rem; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; .pdf-preview { height: 320px; }
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; }
+			</p>
+			<p>
+				&#xa0; &lt;/style&gt;
+			</p>
+			<p>
+				&lt;/head&gt;
+			</p>
+			<p>
+				&lt;body&gt;
+			</p>
+			<p>
+				&#xa0; &lt;header&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;h1&gt;Brazilian E-Commerce Analysis&lt;/h1&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;p&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; Data-Driven Insights from the Olist Open Dataset&lt;br&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;span style="font-size:.96rem;"&gt;Trizzia Ellaine Singson &amp;mdash; CPSC 4810 Portfolio Project&lt;/span&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;/p&gt;
+			</p>
+			<p>
+				&#xa0; &lt;/header&gt;
+			</p>
+			<p>
+				&#xa0;
+			</p>
+			<p>
+				&#xa0; &lt;div class="container"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;h2&gt;Overview&lt;/h2&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;div class="card"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;strong&gt;Summary:&lt;/strong&gt; This project delivers a comprehensive analysis of Brazil’s dynamic e-commerce landscape, using the Olist open dataset. Through robust data science techniques, I dissect customer behavior, regional market differences, and supply chain performance, offering actionable insights for business and analytics teams.
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;h2&gt;Objectives&lt;/h2&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;ul class="bullets"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;Map the entire customer journey from initial order to post-sale satisfaction&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;Identify key regional and seasonal trends in purchasing and delivery&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;Analyze payment methods, product categories, and logistics operations&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;Recommend data-driven strategies to enhance customer experience and operational efficiency&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;/ul&gt;
+			</p>
+			<p>
+				&#xa0;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;h2&gt;Dataset Details&lt;/h2&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;div class="card"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;h3&gt;Olist Brazilian E-Commerce Public Dataset&lt;/h3&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;ul&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;&lt;strong&gt;Source:&lt;/strong&gt; &lt;a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce" target="_blank" style="color:var(--accent-blue);"&gt;Kaggle&lt;/a&gt;&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;&lt;strong&gt;Website:&lt;/strong&gt; &lt;a href="https://olist.com/" target="_blank" style="color:var(--accent-blue);"&gt;Olist&lt;/a&gt;&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;&lt;strong&gt;Period:&lt;/strong&gt; 2016&amp;ndash;2018 | &lt;strong&gt;Orders:&lt;/strong&gt; 100,000+ | &lt;strong&gt;Customers:&lt;/strong&gt; 74,000+&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;&lt;strong&gt;Data Tables:&lt;/strong&gt; Orders, Customers, Sellers, Products, Payments, Reviews, Geolocation&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/ul&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;h2&gt;Methodology&lt;/h2&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;div class="columns"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="col"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;h3&gt;Data Preparation&lt;/h3&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;ul&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;Integrated and validated multiple data tables with Python&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;Handled missing values, outliers, and type conversions&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;Feature engineering for delivery duration, payment mode, and customer location&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/ul&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="col"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;h3&gt;Analysis&lt;/h3&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;ul&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;Exploratory data analysis with interactive visualizations&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;Geospatial analysis to map demand and logistics bottlenecks&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;li&gt;Statistical modeling for seasonality, purchase cycles, and review sentiment&lt;/li&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/ul&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;h2&gt;Key Findings &amp; Insights&lt;/h2&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;div class="findings-grid"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="finding"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;strong&gt;Regional Diversity:&lt;/strong&gt;&lt;br&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; Major order volumes are concentrated in the Southeast, but emerging growth in the North and Northeast points to evolving market opportunities.
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="finding"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;strong&gt;Payment Patterns:&lt;/strong&gt;&lt;br&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; Credit cards dominate, but split payments boost average order value and customer retention.
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="finding"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;strong&gt;Delivery Performance:&lt;/strong&gt;&lt;br&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; Fast, reliable shipping directly correlates with higher customer satisfaction and repeat business.
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="finding"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;strong&gt;Product Trends:&lt;/strong&gt;&lt;br&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; Categories like electronics, fashion, and household items exhibit clear seasonality and response to marketing events.
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="finding"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;strong&gt;Customer Experience:&lt;/strong&gt;&lt;br&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; Transparent communication and delivery tracking are top drivers of positive feedback and review scores.
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div class="finding"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;strong&gt;Business Recommendations:&lt;/strong&gt;&lt;br&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; Targeted logistics improvements and personalized offers can significantly drive growth and customer loyalty.
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;h2&gt;Project Documentation&lt;/h2&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;div class="card" style="background:#e7f2ff;"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;h3&gt;Project Report (PDF Preview)&lt;/h3&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;iframe class="pdf-preview" src="CPSC Project - ECommerce Dataset.pdf"&gt;&lt;/iframe&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;div style="margin-top:.6rem;"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;a class="ext-link" href="CPSC Project - ECommerce Dataset.pdf" target="_blank"&gt;Download Full Report&lt;/a&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;h2&gt;Repositories &amp; Resources&lt;/h2&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;div class="links-list"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;a class="ext-link" href="https://github.com/trizziasingson/CPSC4810_Ecommerce" target="_blank"&gt;View GitHub Repository&lt;/a&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;a class="ext-link" href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce" target="_blank"&gt;View Olist Dataset on Kaggle&lt;/a&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; &lt;a class="ext-link" href="https://olist.com/" target="_blank"&gt;Olist Official Website&lt;/a&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&#xa0; &lt;div class="footer"&gt;
+			</p>
+			<p>
+				&#xa0;&#xa0;&#xa0; &amp;copy; 2025 Trizzia Ellaine Singson &amp;mdash; CPSC 4810 E-Commerce Analysis Portfolio
+			</p>
+			<p>
+				&#xa0; &lt;/div&gt;
+			</p>
+			<p>
+				&lt;/body&gt;
+			</p>
+			<p>
+				&lt;/html&gt;
+			</p>
+	<p style="bottom: 10px; right: 10px; position: absolute;"><a href="https://wordtohtml.net" target="_blank" style="font-size:11px; color: #d0d0d0">Converted to HTML with WordToHTML.net</a></p>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"4581d6a58cf94e929fad52deda295622","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
